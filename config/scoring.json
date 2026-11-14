@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "description": "Transparent scoring configuration. Weights are normalised at runtime; change them or override with CLI priorities. Scores are heuristics, not predictions.",
+  "effective_rain_fraction": 0.70,
+  "effective_rain_note": "Fraction of growing-season precipitation assumed plant-available after runoff and evaporation. A planning assumption, not a measured water balance.",
+  "criteria": {
+    "water_balance": {
+      "label": "Water balance",
+      "weight": 0.22,
+      "description": "Compares indicative crop water demand with effective growing-season precipitation. Penalises demand above the assumed available rain; does not model irrigation efficiency."
+    },
+    "soil_health": {
+      "label": "Soil health",
+      "weight": 0.18,
+      "description": "Combines nitrogen-fixation potential, residue/organic-matter contribution, and rooting depth, with a bonus for legume frequency."
+    },
+    "erosion_control": {
+      "label": "Erosion control",
+      "weight": 0.12,
+      "description": "Combines crop residue/cover class with terrain slope. Steeper fields increase the penalty for bare or low-cover phases."
+    },
+    "forage_value": {
+      "label": "Forage / livestock",
+      "weight": 0.10,
+      "description": "Average indicative forage value of the rotation. Relevant only if the farm has livestock."
+    },
+    "market_fit": {
+      "label": "Market fit",
+      "weight": 0.13,
+      "description": "Qualitative market suitability plus crop diversity. Local prices, contracts, and processing access are NOT modelled."
+    },
+    "resilience": {
+      "label": "Resilience",
+      "weight": 0.15,
+      "description": "Crop/family diversity, drought-tolerance classes, and penalties for consecutive monoculture or same-family sequences."
+    },
+    "agronomic_fit": {
+      "label": "Agronomic fit",
+      "weight": 0.10,
+      "description": "pH, texture, drainage and salinity compatibility with the field's SoilGrids context, plus growing-duration fit to the available season."
+    }
+  },
+  "adjustments": {
+    "legume_frequency_bonus": 0.12,
+    "legume_frequency_note": "Added to soil-health score when at least one third of seasons are legumes, scaled by nitrogen-fixation potential.",
+    "monoculture_penalty": 0.18,
+    "same_family_penalty": 0.10,
+    "diversity_bonus": 0.10,
+    "fallow_erosion_penalty": 0.15,
+    "slope_threshold_pct": 8.0,
+    "slope_penalty_per_pct": 0.012,
+    "max_slope_penalty": 0.25
+  },
+  "confidence_levels": {
+    "high": 0.90,
+    "medium": 0.65,
+    "low": 0.40,
+    "unknown": 0.20
+  },
+  "evidence_quality_thresholds": {
+    "high": 0.75,
+    "medium": 0.55,
+    "low": 0.0
+  }
+}

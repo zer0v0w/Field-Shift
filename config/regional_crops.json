@@ -1,0 +1,2258 @@
+{
+  "schema_version": "1.1",
+  "description": "Regional crop traits used to score what can actually grow at a location. Values are indicative ranges compiled from public agronomy references (FAO, ICARDA, Ecocrop, extension guides). They are decision-support gates, not guarantees. water_demand_mm is seasonal demand; min_mean_temp_c/min_tmin_c and max_frost_days are hard physical limits; max_mean_temp_c caps crops that suffer in hot summers; drought_tolerance is 0-1.",
+  "crops": {
+    "bread_wheat": {
+      "common_name": "Bread wheat",
+      "aliases": [
+        "wheat",
+        "soft wheat",
+        "common wheat",
+        "winter wheat",
+        "spring wheat"
+      ],
+      "group": "cereal",
+      "water_demand_mm": [
+        450,
+        650
+      ],
+      "min_mean_temp_c": 5,
+      "min_tmin_c": -12,
+      "max_frost_days": 140,
+      "max_mean_temp_c": 32,
+      "ph_range": [
+        6.0,
+        7.5
+      ],
+      "textures": [
+        "loam",
+        "silt loam",
+        "clay loam",
+        "silty clay loam"
+      ],
+      "drought_tolerance": 0.55,
+      "season_days": [
+        120,
+        160
+      ],
+      "notes": "Cool-season cereal; the main rainfed staple across temperate Russia and Mediterranean uplands.",
+      "zones": [
+        "cool_temperate",
+        "cold_continental",
+        "warm_temperate"
+      ],
+      "core_zones": [
+        "cool_temperate",
+        "warm_temperate"
+      ]
+    },
+    "durum_wheat": {
+      "common_name": "Durum wheat",
+      "aliases": [
+        "durum",
+        "pasta wheat"
+      ],
+      "group": "cereal",
+      "water_demand_mm": [
+        400,
+        650
+      ],
+      "min_mean_temp_c": 8,
+      "min_tmin_c": -10,
+      "max_frost_days": 110,
+      "max_mean_temp_c": 33,
+      "ph_range": [
+        6.0,
+        8.2
+      ],
+      "textures": [
+        "loam",
+        "clay loam",
+        "silt loam",
+        "silty clay loam"
+      ],
+      "drought_tolerance": 0.7,
+      "season_days": [
+        120,
+        180
+      ],
+      "notes": "Mediterranean-adapted durum; good fit for semi-arid rotations.",
+      "zones": [
+        "mediterranean",
+        "warm_temperate",
+        "hot_arid"
+      ],
+      "core_zones": [
+        "warm_temperate",
+        "mediterranean"
+      ]
+    },
+    "barley": {
+      "common_name": "Barley",
+      "aliases": [
+        "hordeum vulgare",
+        "winter barley",
+        "spring barley"
+      ],
+      "group": "cereal",
+      "water_demand_mm": [
+        300,
+        500
+      ],
+      "min_mean_temp_c": 5,
+      "min_tmin_c": -14,
+      "max_frost_days": 150,
+      "max_mean_temp_c": 34,
+      "ph_range": [
+        6.0,
+        8.5
+      ],
+      "textures": [
+        "loam",
+        "sandy loam",
+        "clay loam",
+        "silt loam"
+      ],
+      "drought_tolerance": 0.85,
+      "season_days": [
+        90,
+        150
+      ],
+      "notes": "Very widely adapted; tolerates salinity and drought better than wheat.",
+      "zones": [
+        "cold_continental",
+        "cool_temperate",
+        "warm_temperate",
+        "mediterranean",
+        "hot_arid"
+      ],
+      "core_zones": [
+        "cold_continental",
+        "cool_temperate",
+        "warm_temperate",
+        "mediterranean",
+        "hot_arid"
+      ]
+    },
+    "oats": {
+      "common_name": "Oats",
+      "aliases": [
+        "avena sativa"
+      ],
+      "group": "cereal",
+      "water_demand_mm": [
+        400,
+        600
+      ],
+      "min_mean_temp_c": 4,
+      "min_tmin_c": -15,
+      "max_frost_days": 160,
+      "max_mean_temp_c": 28,
+      "ph_range": [
+        5.3,
+        7.0
+      ],
+      "textures": [
+        "loam",
+        "silt loam",
+        "sandy loam"
+      ],
+      "drought_tolerance": 0.5,
+      "season_days": [
+        90,
+        130
+      ],
+      "notes": "Cool, moist climates; standard in Russian mixed farming.",
+      "zones": [
+        "cold_continental",
+        "cool_temperate",
+        "warm_temperate"
+      ],
+      "core_zones": [
+        "cold_continental",
+        "cool_temperate"
+      ]
+    },
+    "rye": {
+      "common_name": "Rye",
+      "aliases": [
+        "secale cereale",
+        "winter rye"
+      ],
+      "group": "cereal",
+      "water_demand_mm": [
+        350,
+        550
+      ],
+      "min_mean_temp_c": 3,
+      "min_tmin_c": -20,
+      "max_frost_days": 190,
+      "max_mean_temp_c": 28,
+      "ph_range": [
+        5.0,
+        7.0
+      ],
+      "textures": [
+        "sandy loam",
+        "loam",
+        "silt loam"
+      ],
+      "drought_tolerance": 0.8,
+      "season_days": [
+        120,
+        180
+      ],
+      "notes": "The hardiest cereal; grown across northern Russia where wheat winter-kills.",
+      "zones": [
+        "cold_continental",
+        "cool_temperate"
+      ],
+      "core_zones": [
+        "cold_continental"
+      ]
+    },
+    "triticale": {
+      "common_name": "Triticale",
+      "aliases": [
+        "triticosecale"
+      ],
+      "group": "cereal",
+      "water_demand_mm": [
+        400,
+        600
+      ],
+      "min_mean_temp_c": 4,
+      "min_tmin_c": -16,
+      "max_frost_days": 170,
+      "max_mean_temp_c": 30,
+      "ph_range": [
+        5.5,
+        7.5
+      ],
+      "textures": [
+        "loam",
+        "sandy loam",
+        "silt loam"
+      ],
+      "drought_tolerance": 0.7,
+      "season_days": [
+        120,
+        170
+      ],
+      "notes": "Wheat-rye hybrid for forage and grain in cooler zones.",
+      "zones": [
+        "cold_continental",
+        "cool_temperate",
+        "warm_temperate"
+      ],
+      "core_zones": [
+        "cold_continental",
+        "cool_temperate"
+      ]
+    },
+    "maize": {
+      "common_name": "Maize (corn)",
+      "aliases": [
+        "corn",
+        "zea mays",
+        "sweet corn"
+      ],
+      "group": "cereal",
+      "water_demand_mm": [
+        500,
+        800
+      ],
+      "min_mean_temp_c": 15,
+      "min_tmin_c": 5,
+      "max_frost_days": 10,
+      "max_mean_temp_c": 34,
+      "ph_range": [
+        5.5,
+        7.5
+      ],
+      "textures": [
+        "loam",
+        "silt loam",
+        "clay loam"
+      ],
+      "drought_tolerance": 0.4,
+      "season_days": [
+        90,
+        140
+      ],
+      "notes": "Warm-season; grain and silage. Needs good summer heat and moisture.",
+      "zones": [
+        "warm_temperate",
+        "mediterranean",
+        "hot_arid",
+        "tropical"
+      ],
+      "core_zones": [
+        "warm_temperate",
+        "hot_arid",
+        "tropical"
+      ]
+    },
+    "rice": {
+      "common_name": "Rice",
+      "aliases": [
+        "oryza sativa",
+        "paddy"
+      ],
+      "group": "cereal",
+      "water_demand_mm": [
+        900,
+        1500
+      ],
+      "min_mean_temp_c": 20,
+      "min_tmin_c": 12,
+      "max_frost_days": 0,
+      "max_mean_temp_c": 38,
+      "ph_range": [
+        5.5,
+        7.0
+      ],
+      "textures": [
+        "clay",
+        "silty clay",
+        "clay loam"
+      ],
+      "drought_tolerance": 0.1,
+      "season_days": [
+        100,
+        150
+      ],
+      "notes": "Paddy rice; requires abundant irrigation or monsoon rainfall.",
+      "zones": [
+        "tropical",
+        "hot_arid",
+        "warm_temperate"
+      ],
+      "core_zones": [
+        "warm_temperate",
+        "tropical"
+      ]
+    },
+    "buckwheat": {
+      "common_name": "Buckwheat",
+      "aliases": [
+        "fagopyrum esculentum"
+      ],
+      "group": "cereal",
+      "water_demand_mm": [
+        350,
+        550
+      ],
+      "min_mean_temp_c": 10,
+      "min_tmin_c": 2,
+      "max_frost_days": 20,
+      "max_mean_temp_c": 28,
+      "ph_range": [
+        5.0,
+        7.0
+      ],
+      "textures": [
+        "sandy loam",
+        "loam"
+      ],
+      "drought_tolerance": 0.4,
+      "season_days": [
+        70,
+        100
+      ],
+      "notes": "Short-season catch crop in Russia; sensitive to heat and drought.",
+      "zones": [
+        "cool_temperate",
+        "cold_continental"
+      ],
+      "core_zones": [
+        "cold_continental"
+      ]
+    },
+    "millet": {
+      "common_name": "Millet",
+      "aliases": [
+        "panicum miliaceum",
+        "pearl millet"
+      ],
+      "group": "cereal",
+      "water_demand_mm": [
+        300,
+        450
+      ],
+      "min_mean_temp_c": 18,
+      "min_tmin_c": 8,
+      "max_frost_days": 0,
+      "max_mean_temp_c": 38,
+      "ph_range": [
+        5.5,
+        8.0
+      ],
+      "textures": [
+        "sandy loam",
+        "loam"
+      ],
+      "drought_tolerance": 0.9,
+      "season_days": [
+        70,
+        110
+      ],
+      "notes": "Hot, dry grain; useful summer catch crop in arid zones.",
+      "zones": [
+        "hot_arid",
+        "warm_temperate"
+      ],
+      "core_zones": [
+        "hot_arid"
+      ]
+    },
+    "sorghum": {
+      "common_name": "Sorghum",
+      "aliases": [
+        "sorghum bicolor",
+        "grain sorghum"
+      ],
+      "group": "cereal",
+      "water_demand_mm": [
+        400,
+        650
+      ],
+      "min_mean_temp_c": 20,
+      "min_tmin_c": 10,
+      "max_frost_days": 0,
+      "max_mean_temp_c": 38,
+      "ph_range": [
+        5.5,
+        8.0
+      ],
+      "textures": [
+        "loam",
+        "clay loam",
+        "sandy loam"
+      ],
+      "drought_tolerance": 0.85,
+      "season_days": [
+        90,
+        130
+      ],
+      "notes": "Heat- and drought-tolerant cereal/forage for warm zones.",
+      "zones": [
+        "hot_arid",
+        "warm_temperate",
+        "tropical"
+      ],
+      "core_zones": [
+        "hot_arid",
+        "tropical"
+      ]
+    },
+    "chickpea": {
+      "common_name": "Chickpea",
+      "aliases": [
+        "cicer arietinum",
+        "garbanzo"
+      ],
+      "group": "legume",
+      "water_demand_mm": [
+        300,
+        450
+      ],
+      "min_mean_temp_c": 12,
+      "min_tmin_c": -4,
+      "max_frost_days": 30,
+      "max_mean_temp_c": 35,
+      "ph_range": [
+        6.0,
+        8.5
+      ],
+      "textures": [
+        "loam",
+        "clay loam",
+        "sandy loam"
+      ],
+      "drought_tolerance": 0.85,
+      "season_days": [
+        90,
+        150
+      ],
+      "notes": "Key Mediterranean/South-Asian pulse; fixes nitrogen and tolerates dry springs.",
+      "zones": [
+        "mediterranean",
+        "hot_arid",
+        "warm_temperate"
+      ],
+      "core_zones": [
+        "warm_temperate",
+        "mediterranean"
+      ]
+    },
+    "lentil": {
+      "common_name": "Lentil",
+      "aliases": [
+        "lens culinaris"
+      ],
+      "group": "legume",
+      "water_demand_mm": [
+        300,
+        400
+      ],
+      "min_mean_temp_c": 10,
+      "min_tmin_c": -6,
+      "max_frost_days": 40,
+      "max_mean_temp_c": 32,
+      "ph_range": [
+        6.0,
+        8.0
+      ],
+      "textures": [
+        "loam",
+        "silt loam",
+        "clay loam"
+      ],
+      "drought_tolerance": 0.75,
+      "season_days": [
+        90,
+        140
+      ],
+      "notes": "Cool-season pulse; good in cereal rotations.",
+      "zones": [
+        "mediterranean",
+        "cool_temperate",
+        "warm_temperate",
+        "cold_continental"
+      ],
+      "core_zones": [
+        "warm_temperate",
+        "mediterranean"
+      ]
+    },
+    "faba_bean": {
+      "common_name": "Faba bean",
+      "aliases": [
+        "fava bean",
+        "broad bean",
+        "vicia faba"
+      ],
+      "group": "legume",
+      "water_demand_mm": [
+        350,
+        500
+      ],
+      "min_mean_temp_c": 8,
+      "min_tmin_c": -8,
+      "max_frost_days": 70,
+      "max_mean_temp_c": 28,
+      "ph_range": [
+        6.0,
+        8.0
+      ],
+      "textures": [
+        "loam",
+        "clay loam",
+        "silt loam"
+      ],
+      "drought_tolerance": 0.45,
+      "season_days": [
+        120,
+        180
+      ],
+      "notes": "High nitrogen fixation; needs more moisture and cool flowering.",
+      "zones": [
+        "mediterranean",
+        "cool_temperate",
+        "warm_temperate",
+        "cold_continental"
+      ],
+      "core_zones": [
+        "cool_temperate",
+        "warm_temperate",
+        "mediterranean"
+      ]
+    },
+    "field_pea": {
+      "common_name": "Field pea",
+      "aliases": [
+        "pea",
+        "pisum sativum"
+      ],
+      "group": "legume",
+      "water_demand_mm": [
+        350,
+        500
+      ],
+      "min_mean_temp_c": 6,
+      "min_tmin_c": -10,
+      "max_frost_days": 90,
+      "max_mean_temp_c": 28,
+      "ph_range": [
+        6.0,
+        7.5
+      ],
+      "textures": [
+        "loam",
+        "silt loam",
+        "clay loam"
+      ],
+      "drought_tolerance": 0.5,
+      "season_days": [
+        90,
+        120
+      ],
+      "notes": "Cool-season pulse; standard in Russian and European rotations.",
+      "zones": [
+        "cool_temperate",
+        "cold_continental",
+        "warm_temperate"
+      ],
+      "core_zones": [
+        "cold_continental",
+        "cool_temperate"
+      ]
+    },
+    "common_vetch": {
+      "common_name": "Common vetch",
+      "aliases": [
+        "vetch",
+        "vicia sativa"
+      ],
+      "group": "forage_legume",
+      "water_demand_mm": [
+        300,
+        450
+      ],
+      "min_mean_temp_c": 8,
+      "min_tmin_c": -8,
+      "max_frost_days": 70,
+      "max_mean_temp_c": 30,
+      "ph_range": [
+        6.0,
+        8.0
+      ],
+      "textures": [
+        "loam",
+        "clay loam",
+        "silt loam"
+      ],
+      "drought_tolerance": 0.6,
+      "season_days": [
+        90,
+        150
+      ],
+      "notes": "Forage legume; fixes nitrogen, used in dryland rotations.",
+      "zones": [
+        "mediterranean",
+        "cool_temperate",
+        "warm_temperate"
+      ],
+      "core_zones": [
+        "mediterranean"
+      ]
+    },
+    "soybean": {
+      "common_name": "Soybean",
+      "aliases": [
+        "glycine max",
+        "soya"
+      ],
+      "group": "legume",
+      "water_demand_mm": [
+        500,
+        800
+      ],
+      "min_mean_temp_c": 18,
+      "min_tmin_c": 8,
+      "max_frost_days": 0,
+      "max_mean_temp_c": 34,
+      "ph_range": [
+        6.0,
+        7.5
+      ],
+      "textures": [
+        "loam",
+        "silt loam",
+        "clay loam"
+      ],
+      "drought_tolerance": 0.35,
+      "season_days": [
+        100,
+        140
+      ],
+      "notes": "Warm-season oil/protein crop; increasingly grown in southern Russia.",
+      "zones": [
+        "warm_temperate",
+        "tropical"
+      ],
+      "core_zones": [
+        "warm_temperate"
+      ]
+    },
+    "alfalfa": {
+      "common_name": "Alfalfa",
+      "aliases": [
+        "lucerne",
+        "medicago sativa"
+      ],
+      "group": "forage_legume",
+      "water_demand_mm": [
+        500,
+        900
+      ],
+      "min_mean_temp_c": 8,
+      "min_tmin_c": -15,
+      "max_frost_days": 130,
+      "max_mean_temp_c": 35,
+      "ph_range": [
+        6.5,
+        8.0
+      ],
+      "textures": [
+        "loam",
+        "clay loam",
+        "silt loam"
+      ],
+      "drought_tolerance": 0.65,
+      "season_days": [
+        180,
+        250
+      ],
+      "notes": "Deep-rooted perennial forage; excellent in irrigated and semi-arid rotations.",
+      "hardiness_min_c": -20,
+      "lifecycle": "perennial",
+      "zones": [
+        "warm_temperate",
+        "mediterranean",
+        "cool_temperate",
+        "hot_arid"
+      ],
+      "core_zones": [
+        "warm_temperate",
+        "hot_arid"
+      ]
+    },
+    "clover": {
+      "common_name": "Clover",
+      "aliases": [
+        "trifolium",
+        "red clover",
+        "white clover"
+      ],
+      "group": "forage_legume",
+      "water_demand_mm": [
+        450,
+        700
+      ],
+      "min_mean_temp_c": 6,
+      "min_tmin_c": -12,
+      "max_frost_days": 110,
+      "max_mean_temp_c": 28,
+      "ph_range": [
+        5.8,
+        7.5
+      ],
+      "textures": [
+        "loam",
+        "silt loam",
+        "clay loam"
+      ],
+      "drought_tolerance": 0.4,
+      "season_days": [
+        150,
+        220
+      ],
+      "notes": "Perennial forage legume for cooler, moister zones.",
+      "hardiness_min_c": -18,
+      "lifecycle": "perennial",
+      "zones": [
+        "cool_temperate",
+        "cold_continental",
+        "warm_temperate"
+      ],
+      "core_zones": [
+        "cold_continental",
+        "cool_temperate"
+      ]
+    },
+    "sunflower": {
+      "common_name": "Sunflower",
+      "aliases": [
+        "helianthus annuus"
+      ],
+      "group": "oilseed",
+      "water_demand_mm": [
+        500,
+        700
+      ],
+      "min_mean_temp_c": 15,
+      "min_tmin_c": 3,
+      "max_frost_days": 10,
+      "max_mean_temp_c": 34,
+      "ph_range": [
+        6.0,
+        8.0
+      ],
+      "textures": [
+        "loam",
+        "clay loam",
+        "silt loam"
+      ],
+      "drought_tolerance": 0.65,
+      "season_days": [
+        90,
+        130
+      ],
+      "notes": "Warm-season oilseed; a major crop of southern Russia and Ukraine.",
+      "zones": [
+        "warm_temperate",
+        "mediterranean",
+        "hot_arid"
+      ],
+      "core_zones": [
+        "warm_temperate"
+      ]
+    },
+    "rapeseed": {
+      "common_name": "Rapeseed",
+      "aliases": [
+        "canola",
+        "brassica napus"
+      ],
+      "group": "oilseed",
+      "water_demand_mm": [
+        450,
+        650
+      ],
+      "min_mean_temp_c": 6,
+      "min_tmin_c": -12,
+      "max_frost_days": 100,
+      "max_mean_temp_c": 30,
+      "ph_range": [
+        5.8,
+        7.5
+      ],
+      "textures": [
+        "loam",
+        "clay loam",
+        "silt loam"
+      ],
+      "drought_tolerance": 0.45,
+      "season_days": [
+        100,
+        150
+      ],
+      "notes": "Winter or spring oilseed; widespread in European Russia and the Baltics.",
+      "zones": [
+        "cool_temperate",
+        "cold_continental",
+        "warm_temperate"
+      ],
+      "core_zones": [
+        "cool_temperate",
+        "warm_temperate"
+      ]
+    },
+    "sesame": {
+      "common_name": "Sesame",
+      "aliases": [
+        "sesamum indicum",
+        "benne"
+      ],
+      "group": "oilseed",
+      "water_demand_mm": [
+        400,
+        650
+      ],
+      "min_mean_temp_c": 22,
+      "min_tmin_c": 12,
+      "max_frost_days": 0,
+      "max_mean_temp_c": 40,
+      "ph_range": [
+        5.5,
+        8.0
+      ],
+      "textures": [
+        "sandy loam",
+        "loam"
+      ],
+      "drought_tolerance": 0.85,
+      "season_days": [
+        80,
+        120
+      ],
+      "notes": "Hot-season oilseed for the Jordan Valley and similar warm dry areas.",
+      "zones": [
+        "hot_arid",
+        "tropical"
+      ],
+      "core_zones": [
+        "hot_arid",
+        "tropical"
+      ]
+    },
+    "flax": {
+      "common_name": "Flax",
+      "aliases": [
+        "linseed",
+        "linum usitatissimum"
+      ],
+      "group": "oilseed",
+      "water_demand_mm": [
+        400,
+        550
+      ],
+      "min_mean_temp_c": 8,
+      "min_tmin_c": -8,
+      "max_frost_days": 40,
+      "max_mean_temp_c": 26,
+      "ph_range": [
+        5.5,
+        7.0
+      ],
+      "textures": [
+        "loam",
+        "silt loam",
+        "sandy loam"
+      ],
+      "drought_tolerance": 0.5,
+      "season_days": [
+        80,
+        120
+      ],
+      "notes": "Cool-season fibre/oil crop of northern Russia and Belarus.",
+      "zones": [
+        "cool_temperate",
+        "cold_continental"
+      ],
+      "core_zones": [
+        "cold_continental",
+        "cool_temperate"
+      ]
+    },
+    "cotton": {
+      "common_name": "Cotton",
+      "aliases": [
+        "gossypium"
+      ],
+      "group": "fibre",
+      "water_demand_mm": [
+        700,
+        1200
+      ],
+      "min_mean_temp_c": 22,
+      "min_tmin_c": 14,
+      "max_frost_days": 0,
+      "max_mean_temp_c": 38,
+      "ph_range": [
+        6.0,
+        8.5
+      ],
+      "textures": [
+        "loam",
+        "clay loam"
+      ],
+      "drought_tolerance": 0.6,
+      "season_days": [
+        140,
+        200
+      ],
+      "notes": "Irrigated warm-season fibre crop.",
+      "zones": [
+        "hot_arid",
+        "tropical",
+        "warm_temperate"
+      ],
+      "core_zones": [
+        "warm_temperate",
+        "hot_arid"
+      ]
+    },
+    "potato": {
+      "common_name": "Potato",
+      "aliases": [
+        "solanum tuberosum",
+        "spud"
+      ],
+      "group": "root",
+      "water_demand_mm": [
+        450,
+        700
+      ],
+      "min_mean_temp_c": 10,
+      "min_tmin_c": -5,
+      "max_frost_days": 20,
+      "max_mean_temp_c": 26,
+      "ph_range": [
+        5.0,
+        6.8
+      ],
+      "textures": [
+        "sandy loam",
+        "loam",
+        "silt loam"
+      ],
+      "drought_tolerance": 0.35,
+      "season_days": [
+        90,
+        130
+      ],
+      "notes": "Cool-season tuber; a staple of Russian and northern European farming.",
+      "zones": [
+        "cool_temperate",
+        "cold_continental",
+        "warm_temperate",
+        "mediterranean"
+      ],
+      "core_zones": [
+        "cold_continental",
+        "cool_temperate"
+      ]
+    },
+    "sugar_beet": {
+      "common_name": "Sugar beet",
+      "aliases": [
+        "beta vulgaris",
+        "beetroot"
+      ],
+      "group": "root",
+      "water_demand_mm": [
+        500,
+        750
+      ],
+      "min_mean_temp_c": 10,
+      "min_tmin_c": -6,
+      "max_frost_days": 35,
+      "max_mean_temp_c": 28,
+      "ph_range": [
+        6.0,
+        7.8
+      ],
+      "textures": [
+        "loam",
+        "clay loam",
+        "silt loam"
+      ],
+      "drought_tolerance": 0.4,
+      "season_days": [
+        140,
+        200
+      ],
+      "notes": "Temperate root crop; major in European Russia and Ukraine.",
+      "zones": [
+        "cool_temperate",
+        "cold_continental",
+        "warm_temperate"
+      ],
+      "core_zones": [
+        "cool_temperate",
+        "warm_temperate"
+      ]
+    },
+    "fodder_beet": {
+      "common_name": "Fodder beet",
+      "aliases": [
+        "mangel",
+        "mangold"
+      ],
+      "group": "forage",
+      "water_demand_mm": [
+        500,
+        750
+      ],
+      "min_mean_temp_c": 9,
+      "min_tmin_c": -6,
+      "max_frost_days": 35,
+      "max_mean_temp_c": 28,
+      "ph_range": [
+        6.0,
+        7.8
+      ],
+      "textures": [
+        "loam",
+        "clay loam"
+      ],
+      "drought_tolerance": 0.4,
+      "season_days": [
+        140,
+        180
+      ],
+      "notes": "High-yield livestock feed in cool temperate zones.",
+      "zones": [
+        "cool_temperate",
+        "cold_continental",
+        "warm_temperate"
+      ],
+      "core_zones": [
+        "cold_continental",
+        "cool_temperate"
+      ]
+    },
+    "carrot": {
+      "common_name": "Carrot",
+      "aliases": [
+        "daucus carota"
+      ],
+      "group": "root",
+      "water_demand_mm": [
+        400,
+        600
+      ],
+      "min_mean_temp_c": 10,
+      "min_tmin_c": -5,
+      "max_frost_days": 20,
+      "max_mean_temp_c": 28,
+      "ph_range": [
+        5.8,
+        7.0
+      ],
+      "textures": [
+        "sandy loam",
+        "loam"
+      ],
+      "drought_tolerance": 0.4,
+      "season_days": [
+        70,
+        120
+      ],
+      "notes": "Cool-season root vegetable.",
+      "zones": [
+        "cool_temperate",
+        "cold_continental",
+        "warm_temperate",
+        "mediterranean"
+      ],
+      "core_zones": [
+        "cold_continental",
+        "cool_temperate"
+      ]
+    },
+    "onion": {
+      "common_name": "Onion",
+      "aliases": [
+        "allium cepa"
+      ],
+      "group": "vegetable",
+      "water_demand_mm": [
+        400,
+        600
+      ],
+      "min_mean_temp_c": 12,
+      "min_tmin_c": -3,
+      "max_frost_days": 15,
+      "max_mean_temp_c": 32,
+      "ph_range": [
+        6.0,
+        7.5
+      ],
+      "textures": [
+        "loam",
+        "sandy loam"
+      ],
+      "drought_tolerance": 0.55,
+      "season_days": [
+        90,
+        150
+      ],
+      "notes": "Bulb onion; widely grown in both Mediterranean and temperate zones.",
+      "zones": [
+        "mediterranean",
+        "warm_temperate",
+        "cool_temperate",
+        "hot_arid"
+      ],
+      "core_zones": [
+        "warm_temperate",
+        "hot_arid"
+      ]
+    },
+    "tomato": {
+      "common_name": "Tomato",
+      "aliases": [
+        "solanum lycopersicum"
+      ],
+      "group": "vegetable",
+      "water_demand_mm": [
+        500,
+        800
+      ],
+      "min_mean_temp_c": 18,
+      "min_tmin_c": 8,
+      "max_frost_days": 0,
+      "max_mean_temp_c": 35,
+      "ph_range": [
+        6.0,
+        7.0
+      ],
+      "textures": [
+        "loam",
+        "sandy loam",
+        "clay loam"
+      ],
+      "drought_tolerance": 0.35,
+      "season_days": [
+        90,
+        130
+      ],
+      "notes": "Warm-season fruit vegetable; irrigated in arid zones, field-grown in warm temperate.",
+      "zones": [
+        "warm_temperate",
+        "mediterranean",
+        "hot_arid",
+        "tropical"
+      ],
+      "core_zones": [
+        "warm_temperate",
+        "mediterranean",
+        "hot_arid",
+        "tropical"
+      ]
+    },
+    "cucumber": {
+      "common_name": "Cucumber",
+      "aliases": [
+        "cucumis sativus"
+      ],
+      "group": "vegetable",
+      "water_demand_mm": [
+        500,
+        800
+      ],
+      "min_mean_temp_c": 18,
+      "min_tmin_c": 10,
+      "max_frost_days": 0,
+      "max_mean_temp_c": 35,
+      "ph_range": [
+        6.0,
+        7.0
+      ],
+      "textures": [
+        "loam",
+        "sandy loam"
+      ],
+      "drought_tolerance": 0.25,
+      "season_days": [
+        55,
+        90
+      ],
+      "notes": "Warm-season cucurbit; needs reliable irrigation.",
+      "zones": [
+        "warm_temperate",
+        "mediterranean",
+        "hot_arid",
+        "tropical"
+      ],
+      "core_zones": [
+        "warm_temperate",
+        "hot_arid",
+        "tropical"
+      ]
+    },
+    "pepper": {
+      "common_name": "Pepper",
+      "aliases": [
+        "capsicum",
+        "bell pepper",
+        "chilli"
+      ],
+      "group": "vegetable",
+      "water_demand_mm": [
+        500,
+        800
+      ],
+      "min_mean_temp_c": 20,
+      "min_tmin_c": 10,
+      "max_frost_days": 0,
+      "max_mean_temp_c": 35,
+      "ph_range": [
+        6.0,
+        7.0
+      ],
+      "textures": [
+        "loam",
+        "sandy loam"
+      ],
+      "drought_tolerance": 0.4,
+      "season_days": [
+        80,
+        120
+      ],
+      "notes": "Warm-season fruit vegetable, high value under irrigation.",
+      "zones": [
+        "warm_temperate",
+        "mediterranean",
+        "hot_arid",
+        "tropical"
+      ],
+      "core_zones": [
+        "warm_temperate",
+        "hot_arid",
+        "tropical"
+      ]
+    },
+    "eggplant": {
+      "common_name": "Eggplant",
+      "aliases": [
+        "aubergine",
+        "brinjal",
+        "solanum melongena"
+      ],
+      "group": "vegetable",
+      "water_demand_mm": [
+        600,
+        900
+      ],
+      "min_mean_temp_c": 21,
+      "min_tmin_c": 12,
+      "max_frost_days": 0,
+      "max_mean_temp_c": 38,
+      "ph_range": [
+        6.0,
+        7.0
+      ],
+      "textures": [
+        "loam",
+        "sandy loam"
+      ],
+      "drought_tolerance": 0.4,
+      "season_days": [
+        90,
+        130
+      ],
+      "notes": "Hot-season fruit vegetable; good fit for the Jordan Valley.",
+      "zones": [
+        "hot_arid",
+        "mediterranean",
+        "warm_temperate",
+        "tropical"
+      ],
+      "core_zones": [
+        "warm_temperate",
+        "hot_arid",
+        "tropical"
+      ]
+    },
+    "melon": {
+      "common_name": "Melon",
+      "aliases": [
+        "cucumis melo",
+        "cantaloupe"
+      ],
+      "group": "vegetable",
+      "water_demand_mm": [
+        450,
+        700
+      ],
+      "min_mean_temp_c": 20,
+      "min_tmin_c": 10,
+      "max_frost_days": 0,
+      "max_mean_temp_c": 38,
+      "ph_range": [
+        6.0,
+        7.5
+      ],
+      "textures": [
+        "sandy loam",
+        "loam"
+      ],
+      "drought_tolerance": 0.7,
+      "season_days": [
+        70,
+        100
+      ],
+      "notes": "Warm-season melon; traditional in Jericho and the Jordan Valley.",
+      "zones": [
+        "hot_arid",
+        "mediterranean",
+        "warm_temperate"
+      ],
+      "core_zones": [
+        "warm_temperate",
+        "hot_arid",
+        "tropical"
+      ]
+    },
+    "watermelon": {
+      "common_name": "Watermelon",
+      "aliases": [
+        "citrullus lanatus"
+      ],
+      "group": "vegetable",
+      "water_demand_mm": [
+        450,
+        700
+      ],
+      "min_mean_temp_c": 22,
+      "min_tmin_c": 12,
+      "max_frost_days": 0,
+      "max_mean_temp_c": 38,
+      "ph_range": [
+        6.0,
+        7.5
+      ],
+      "textures": [
+        "sandy loam",
+        "loam"
+      ],
+      "drought_tolerance": 0.75,
+      "season_days": [
+        70,
+        100
+      ],
+      "notes": "Hot-season cucurbit; good in warm dry areas with irrigation.",
+      "zones": [
+        "hot_arid",
+        "mediterranean",
+        "warm_temperate"
+      ],
+      "core_zones": [
+        "warm_temperate",
+        "hot_arid",
+        "tropical"
+      ]
+    },
+    "zucchini": {
+      "common_name": "Zucchini",
+      "aliases": [
+        "courgette",
+        "squash"
+      ],
+      "group": "vegetable",
+      "water_demand_mm": [
+        500,
+        800
+      ],
+      "min_mean_temp_c": 18,
+      "min_tmin_c": 8,
+      "max_frost_days": 0,
+      "max_mean_temp_c": 35,
+      "ph_range": [
+        6.0,
+        7.0
+      ],
+      "textures": [
+        "loam",
+        "sandy loam"
+      ],
+      "drought_tolerance": 0.3,
+      "season_days": [
+        50,
+        80
+      ],
+      "notes": "Fast warm-season vegetable.",
+      "zones": [
+        "warm_temperate",
+        "mediterranean",
+        "hot_arid"
+      ],
+      "core_zones": [
+        "warm_temperate",
+        "mediterranean",
+        "hot_arid"
+      ]
+    },
+    "cabbage": {
+      "common_name": "Cabbage",
+      "aliases": [
+        "brassica oleracea"
+      ],
+      "group": "vegetable",
+      "water_demand_mm": [
+        450,
+        650
+      ],
+      "min_mean_temp_c": 10,
+      "min_tmin_c": -5,
+      "max_frost_days": 20,
+      "max_mean_temp_c": 26,
+      "ph_range": [
+        6.0,
+        7.5
+      ],
+      "textures": [
+        "loam",
+        "clay loam",
+        "silt loam"
+      ],
+      "drought_tolerance": 0.4,
+      "season_days": [
+        70,
+        120
+      ],
+      "notes": "Cool-season brassica; a staple in Russia.",
+      "zones": [
+        "cool_temperate",
+        "cold_continental",
+        "warm_temperate"
+      ],
+      "core_zones": [
+        "cold_continental",
+        "cool_temperate"
+      ]
+    },
+    "cauliflower": {
+      "common_name": "Cauliflower",
+      "aliases": [
+        "brassica oleracea var. botrytis"
+      ],
+      "group": "vegetable",
+      "water_demand_mm": [
+        450,
+        650
+      ],
+      "min_mean_temp_c": 12,
+      "min_tmin_c": -3,
+      "max_frost_days": 15,
+      "max_mean_temp_c": 26,
+      "ph_range": [
+        6.0,
+        7.5
+      ],
+      "textures": [
+        "loam",
+        "silt loam"
+      ],
+      "drought_tolerance": 0.35,
+      "season_days": [
+        70,
+        120
+      ],
+      "notes": "Cool-season brassica.",
+      "zones": [
+        "cool_temperate",
+        "warm_temperate",
+        "mediterranean"
+      ],
+      "core_zones": [
+        "cool_temperate",
+        "warm_temperate",
+        "mediterranean"
+      ]
+    },
+    "strawberry": {
+      "common_name": "Strawberry",
+      "aliases": [
+        "fragaria"
+      ],
+      "group": "fruit",
+      "water_demand_mm": [
+        450,
+        700
+      ],
+      "min_mean_temp_c": 12,
+      "min_tmin_c": -5,
+      "max_frost_days": 20,
+      "max_mean_temp_c": 28,
+      "ph_range": [
+        5.5,
+        6.8
+      ],
+      "textures": [
+        "sandy loam",
+        "loam"
+      ],
+      "drought_tolerance": 0.35,
+      "season_days": [
+        90,
+        150
+      ],
+      "notes": "Perennial fruit; grown in both temperate and Mediterranean zones.",
+      "hardiness_min_c": -12,
+      "lifecycle": "perennial",
+      "zones": [
+        "cool_temperate",
+        "warm_temperate",
+        "mediterranean",
+        "cold_continental"
+      ],
+      "core_zones": [
+        "cool_temperate"
+      ]
+    },
+    "artichoke": {
+      "common_name": "Artichoke",
+      "aliases": [
+        "cynara scolymus"
+      ],
+      "group": "vegetable",
+      "water_demand_mm": [
+        450,
+        700
+      ],
+      "min_mean_temp_c": 12,
+      "min_tmin_c": -3,
+      "max_frost_days": 10,
+      "max_mean_temp_c": 30,
+      "ph_range": [
+        6.0,
+        7.5
+      ],
+      "textures": [
+        "loam",
+        "clay loam"
+      ],
+      "drought_tolerance": 0.55,
+      "season_days": [
+        120,
+        180
+      ],
+      "notes": "Mediterranean perennial vegetable.",
+      "hardiness_min_c": -8,
+      "lifecycle": "perennial",
+      "zones": [
+        "mediterranean",
+        "warm_temperate"
+      ],
+      "core_zones": [
+        "mediterranean"
+      ]
+    },
+    "banana": {
+      "common_name": "Banana",
+      "aliases": [
+        "musa",
+        "plantain"
+      ],
+      "group": "fruit",
+      "water_demand_mm": [
+        1000,
+        2500
+      ],
+      "min_mean_temp_c": 20,
+      "min_tmin_c": 15,
+      "max_frost_days": 0,
+      "max_mean_temp_c": 35,
+      "ph_range": [
+        5.5,
+        7.0
+      ],
+      "textures": [
+        "loam",
+        "sandy loam",
+        "clay loam"
+      ],
+      "drought_tolerance": 0.2,
+      "season_days": [
+        270,
+        365
+      ],
+      "notes": "Frost-free tropical perennial; in the Jordan Valley it needs heavy irrigation.",
+      "hardiness_min_c": 0,
+      "lifecycle": "perennial",
+      "zones": [
+        "tropical",
+        "hot_arid"
+      ],
+      "core_zones": [
+        "hot_arid",
+        "tropical"
+      ]
+    },
+    "date_palm": {
+      "common_name": "Date palm",
+      "aliases": [
+        "dates",
+        "phoenix dactylifera",
+        "palm"
+      ],
+      "group": "fruit",
+      "water_demand_mm": [
+        600,
+        1500
+      ],
+      "min_mean_temp_c": 18,
+      "min_tmin_c": 8,
+      "max_frost_days": 0,
+      "max_mean_temp_c": 45,
+      "ph_range": [
+        6.5,
+        8.2
+      ],
+      "textures": [
+        "sandy loam",
+        "loam",
+        "sand"
+      ],
+      "drought_tolerance": 0.9,
+      "season_days": [
+        180,
+        240
+      ],
+      "notes": "Classic hot-arid perennial; Jericho and the Jordan Valley are historic date-growing areas. Needs irrigation for good yield.",
+      "hardiness_min_c": -6,
+      "lifecycle": "perennial",
+      "zones": [
+        "hot_arid"
+      ],
+      "core_zones": [
+        "hot_arid"
+      ]
+    },
+    "olive": {
+      "common_name": "Olive",
+      "aliases": [
+        "olea europaea"
+      ],
+      "group": "fruit",
+      "water_demand_mm": [
+        400,
+        700
+      ],
+      "min_mean_temp_c": 15,
+      "min_tmin_c": -2,
+      "max_frost_days": 5,
+      "max_mean_temp_c": 35,
+      "ph_range": [
+        6.0,
+        8.5
+      ],
+      "textures": [
+        "loam",
+        "clay loam",
+        "sandy loam"
+      ],
+      "drought_tolerance": 0.9,
+      "season_days": [
+        180,
+        240
+      ],
+      "notes": "Mediterranean perennial; drought-hardy once established.",
+      "hardiness_min_c": -10,
+      "lifecycle": "perennial",
+      "zones": [
+        "mediterranean",
+        "hot_arid"
+      ],
+      "core_zones": [
+        "mediterranean",
+        "hot_arid"
+      ]
+    },
+    "grape": {
+      "common_name": "Grape",
+      "aliases": [
+        "vitis vinifera",
+        "vineyard"
+      ],
+      "group": "fruit",
+      "water_demand_mm": [
+        400,
+        700
+      ],
+      "min_mean_temp_c": 15,
+      "min_tmin_c": -5,
+      "max_frost_days": 10,
+      "max_mean_temp_c": 35,
+      "ph_range": [
+        6.0,
+        8.0
+      ],
+      "textures": [
+        "loam",
+        "clay loam",
+        "sandy loam"
+      ],
+      "drought_tolerance": 0.75,
+      "season_days": [
+        150,
+        210
+      ],
+      "notes": "Mediterranean and warm-temperate perennial; Krasnodar and Jericho are both grape areas.",
+      "hardiness_min_c": -15,
+      "lifecycle": "perennial",
+      "zones": [
+        "mediterranean",
+        "warm_temperate",
+        "hot_arid"
+      ],
+      "core_zones": [
+        "warm_temperate",
+        "mediterranean",
+        "hot_arid"
+      ]
+    },
+    "citrus": {
+      "common_name": "Citrus",
+      "aliases": [
+        "orange",
+        "lemon",
+        "mandarin",
+        "citrus spp."
+      ],
+      "group": "fruit",
+      "water_demand_mm": [
+        600,
+        1200
+      ],
+      "min_mean_temp_c": 15,
+      "min_tmin_c": 5,
+      "max_frost_days": 2,
+      "max_mean_temp_c": 35,
+      "ph_range": [
+        5.5,
+        7.0
+      ],
+      "textures": [
+        "loam",
+        "sandy loam"
+      ],
+      "drought_tolerance": 0.5,
+      "season_days": [
+        240,
+        365
+      ],
+      "notes": "Subtropical perennial; needs frost protection and irrigation in dry zones.",
+      "hardiness_min_c": -4,
+      "lifecycle": "perennial",
+      "zones": [
+        "mediterranean",
+        "warm_temperate",
+        "tropical"
+      ],
+      "core_zones": [
+        "mediterranean",
+        "hot_arid",
+        "tropical"
+      ]
+    },
+    "fig": {
+      "common_name": "Fig",
+      "aliases": [
+        "ficus carica"
+      ],
+      "group": "fruit",
+      "water_demand_mm": [
+        400,
+        700
+      ],
+      "min_mean_temp_c": 15,
+      "min_tmin_c": -4,
+      "max_frost_days": 5,
+      "max_mean_temp_c": 38,
+      "ph_range": [
+        6.0,
+        8.0
+      ],
+      "textures": [
+        "loam",
+        "clay loam"
+      ],
+      "drought_tolerance": 0.85,
+      "season_days": [
+        150,
+        210
+      ],
+      "notes": "Mediterranean fruit; very drought-tolerant.",
+      "hardiness_min_c": -12,
+      "lifecycle": "perennial",
+      "zones": [
+        "mediterranean",
+        "hot_arid"
+      ],
+      "core_zones": [
+        "mediterranean",
+        "hot_arid"
+      ]
+    },
+    "pomegranate": {
+      "common_name": "Pomegranate",
+      "aliases": [
+        "punica granatum"
+      ],
+      "group": "fruit",
+      "water_demand_mm": [
+        400,
+        700
+      ],
+      "min_mean_temp_c": 15,
+      "min_tmin_c": -6,
+      "max_frost_days": 10,
+      "max_mean_temp_c": 40,
+      "ph_range": [
+        5.5,
+        7.5
+      ],
+      "textures": [
+        "loam",
+        "clay loam"
+      ],
+      "drought_tolerance": 0.9,
+      "season_days": [
+        180,
+        240
+      ],
+      "notes": "Heat- and drought-tolerant Mediterranean fruit.",
+      "hardiness_min_c": -12,
+      "lifecycle": "perennial",
+      "zones": [
+        "mediterranean",
+        "hot_arid"
+      ],
+      "core_zones": [
+        "mediterranean",
+        "hot_arid"
+      ]
+    },
+    "almond": {
+      "common_name": "Almond",
+      "aliases": [
+        "prunus dulcis"
+      ],
+      "group": "fruit",
+      "water_demand_mm": [
+        400,
+        700
+      ],
+      "min_mean_temp_c": 14,
+      "min_tmin_c": -4,
+      "max_frost_days": 8,
+      "max_mean_temp_c": 35,
+      "ph_range": [
+        6.0,
+        8.0
+      ],
+      "textures": [
+        "loam",
+        "sandy loam"
+      ],
+      "drought_tolerance": 0.85,
+      "season_days": [
+        180,
+        240
+      ],
+      "notes": "Warm-temperate nut; early flowering risks spring frost.",
+      "hardiness_min_c": -15,
+      "lifecycle": "perennial",
+      "zones": [
+        "mediterranean",
+        "hot_arid"
+      ],
+      "core_zones": [
+        "mediterranean",
+        "hot_arid"
+      ]
+    },
+    "pistachio": {
+      "common_name": "Pistachio",
+      "aliases": [
+        "pistacia vera"
+      ],
+      "group": "fruit",
+      "water_demand_mm": [
+        400,
+        700
+      ],
+      "min_mean_temp_c": 15,
+      "min_tmin_c": -4,
+      "max_frost_days": 8,
+      "max_mean_temp_c": 38,
+      "ph_range": [
+        6.5,
+        8.5
+      ],
+      "textures": [
+        "sandy loam",
+        "loam"
+      ],
+      "drought_tolerance": 0.9,
+      "season_days": [
+        180,
+        240
+      ],
+      "notes": "Very drought-tolerant nut for hot, dry regions.",
+      "hardiness_min_c": -15,
+      "lifecycle": "perennial",
+      "zones": [
+        "mediterranean",
+        "hot_arid"
+      ],
+      "core_zones": [
+        "mediterranean",
+        "hot_arid"
+      ]
+    },
+    "mango": {
+      "common_name": "Mango",
+      "aliases": [
+        "mangifera indica"
+      ],
+      "group": "fruit",
+      "water_demand_mm": [
+        700,
+        2000
+      ],
+      "min_mean_temp_c": 21,
+      "min_tmin_c": 15,
+      "max_frost_days": 0,
+      "max_mean_temp_c": 38,
+      "ph_range": [
+        5.5,
+        7.5
+      ],
+      "textures": [
+        "loam",
+        "sandy loam"
+      ],
+      "drought_tolerance": 0.4,
+      "season_days": [
+        240,
+        365
+      ],
+      "notes": "Tropical perennial; only frost-free subtropical oases.",
+      "hardiness_min_c": 0,
+      "lifecycle": "perennial",
+      "zones": [
+        "tropical"
+      ],
+      "core_zones": [
+        "tropical"
+      ]
+    },
+    "avocado": {
+      "common_name": "Avocado",
+      "aliases": [
+        "persea americana"
+      ],
+      "group": "fruit",
+      "water_demand_mm": [
+        800,
+        1600
+      ],
+      "min_mean_temp_c": 18,
+      "min_tmin_c": 12,
+      "max_frost_days": 1,
+      "max_mean_temp_c": 33,
+      "ph_range": [
+        5.5,
+        7.0
+      ],
+      "textures": [
+        "loam",
+        "sandy loam"
+      ],
+      "drought_tolerance": 0.3,
+      "season_days": [
+        240,
+        365
+      ],
+      "notes": "Subtropical perennial; high water demand.",
+      "hardiness_min_c": -2,
+      "lifecycle": "perennial",
+      "zones": [
+        "tropical",
+        "warm_temperate"
+      ],
+      "core_zones": [
+        "tropical"
+      ]
+    },
+    "fallow": {
+      "common_name": "Fallow (no crop)",
+      "aliases": [
+        "bare",
+        "bare soil",
+        "rest"
+      ],
+      "group": "fallow",
+      "water_demand_mm": [
+        0,
+        50
+      ],
+      "min_mean_temp_c": -50,
+      "min_tmin_c": -50,
+      "max_frost_days": 365,
+      "max_mean_temp_c": 60,
+      "ph_range": [
+        0,
+        14
+      ],
+      "textures": [
+        "sand",
+        "sandy loam",
+        "loam",
+        "silt loam",
+        "silt",
+        "clay loam",
+        "silty clay loam",
+        "clay",
+        "sandy clay",
+        "silty clay"
+      ],
+      "drought_tolerance": 1.0,
+      "season_days": [
+        60,
+        240
+      ],
+      "notes": "Deliberate rest period to store water; not a cash crop.",
+      "zones": [
+        "cold_continental",
+        "cool_temperate",
+        "warm_temperate",
+        "mediterranean",
+        "hot_arid",
+        "tropical"
+      ],
+      "core_zones": [
+        "cold_continental",
+        "cool_temperate",
+        "warm_temperate",
+        "mediterranean",
+        "hot_arid",
+        "tropical"
+      ]
+    },
+    "cowpea": {
+      "common_name": "Cowpea",
+      "aliases": [
+        "black-eyed pea",
+        "kunde",
+        "niebe",
+        "pilipili"
+      ],
+      "group": "legume",
+      "water_demand_mm": [
+        300,
+        500
+      ],
+      "min_mean_temp_c": 15,
+      "min_tmin_c": 5,
+      "max_frost_days": 0,
+      "max_mean_temp_c": 35,
+      "ph_range": [
+        5.5,
+        7.5
+      ],
+      "textures": [
+        "sandy loam",
+        "loam"
+      ],
+      "drought_tolerance": 0.9,
+      "season_days": [
+        60,
+        90
+      ],
+      "lifecycle": "annual",
+      "hardiness_min_c": null,
+      "zones": [
+        "hot_arid"
+      ],
+      "core_zones": [
+        "hot_arid"
+      ],
+      "source": "regional"
+    },
+    "kale": {
+      "common_name": "Kale",
+      "aliases": [
+        "collard greens",
+        "borecole"
+      ],
+      "group": "vegetable",
+      "water_demand_mm": [
+        400,
+        600
+      ],
+      "min_mean_temp_c": 5,
+      "min_tmin_c": -15,
+      "max_frost_days": 100,
+      "max_mean_temp_c": 25,
+      "ph_range": [
+        6.0,
+        7.5
+      ],
+      "textures": [
+        "loam",
+        "silt loam"
+      ],
+      "drought_tolerance": 0.6,
+      "season_days": [
+        90,
+        150
+      ],
+      "lifecycle": "biennial",
+      "hardiness_min_c": -15,
+      "zones": [
+        "cold_continental",
+        "cool_temperate"
+      ],
+      "core_zones": [
+        "cold_continental"
+      ],
+      "source": "regional"
+    },
+    "safflower": {
+      "common_name": "Safflower",
+      "aliases": [
+        "carthamus tinctorius"
+      ],
+      "group": "oilseed",
+      "water_demand_mm": [
+        300,
+        400
+      ],
+      "min_mean_temp_c": 15,
+      "min_tmin_c": 0,
+      "max_frost_days": 5,
+      "max_mean_temp_c": 35,
+      "ph_range": [
+        6.0,
+        8.5
+      ],
+      "textures": [
+        "sandy loam",
+        "loam"
+      ],
+      "drought_tolerance": 0.85,
+      "season_days": [
+        90,
+        130
+      ],
+      "lifecycle": "annual",
+      "hardiness_min_c": null,
+      "zones": [
+        "hot_arid"
+      ],
+      "core_zones": [
+        "hot_arid"
+      ],
+      "source": "regional"
+    },
+    "rutabaga": {
+      "common_name": "Rutabaga",
+      "aliases": [
+        "swede",
+        "swedish turnip"
+      ],
+      "group": "root",
+      "water_demand_mm": [
+        400,
+        550
+      ],
+      "min_mean_temp_c": 5,
+      "min_tmin_c": -20,
+      "max_frost_days": 120,
+      "max_mean_temp_c": 22,
+      "ph_range": [
+        5.5,
+        7.0
+      ],
+      "textures": [
+        "loam",
+        "silt loam"
+      ],
+      "drought_tolerance": 0.7,
+      "season_days": [
+        100,
+        140
+      ],
+      "lifecycle": "biennial",
+      "hardiness_min_c": -10,
+      "zones": [
+        "cold_continental",
+        "cool_temperate"
+      ],
+      "core_zones": [
+        "cold_continental"
+      ],
+      "source": "regional"
+    }
+  },
+  "last_updated": "2026-11-14"
+}

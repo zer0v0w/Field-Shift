@@ -1,0 +1,5 @@
+# Optional PyTorch dependencies for a future Presto adapter.
+# No Presto adapter or CLI command exists in this milestone; the default
+# pipeline does not import torch.
+-r requirements.txt
+torch>=2.2

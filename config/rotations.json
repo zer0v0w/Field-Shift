@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "baseline_id": "existing",
+  "description": "Three illustrative three-season rotations for a Mediterranean rainfed field. Replace with the farmer's actual sequence. Crop ids must exist in crop_catalog.json.",
+  "rotations": [
+    {
+      "id": "existing",
+      "name": "Existing / current rotation",
+      "description": "Durum wheat followed by fallow, then durum wheat. Represents a common low-input rainfed baseline in which the fallow period stores water and reduces risk.",
+      "sequence": ["durum_wheat", "fallow", "durum_wheat"],
+      "rationale": "Baseline for comparison. Fallow can conserve moisture but leaves soil exposed and produces no cash crop.",
+      "notes": "Replace this sequence with the farmer's real history if known."
+    },
+    {
+      "id": "alternative_a",
+      "name": "Alternative A — cereal–legume",
+      "description": "Durum wheat, chickpea, barley. Adds a nitrogen-fixing food legume and a drought-tolerant cereal while keeping the rotation rainfed.",
+      "sequence": ["durum_wheat", "chickpea", "barley"],
+      "rationale": "Legume nitrogen and diversification with relatively low water demand.",
+      "notes": "Chickpea establishment, market access, and rhizobium availability need local verification."
+    },
+    {
+      "id": "alternative_b",
+      "name": "Alternative B — diversified forage/oilseed",
+      "description": "Barley, faba bean, sunflower. Combines a drought-tolerant cereal, a high-nitrogen forage legume, and a summer oilseed.",
+      "sequence": ["barley", "faba_bean", "sunflower"],
+      "rationale": "Diversifies income and feed supply and adds a strong legume, but sunflower substantially increases water demand in summer.",
+      "notes": "Likely requires irrigation for sunflower; confirm water rights and market demand before considering."
+    }
+  ]
+}

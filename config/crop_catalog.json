@@ -1,0 +1,264 @@
+{
+  "schema_version": "1.0",
+  "catalog_version": "2026-11-12",
+  "disclaimer": "Indicative Mediterranean crop attributes compiled from public agronomic references. Values are ranges, not local trial results, and are not farming recommendations. Verify with local extension services, soil tests, and current market information.",
+  "confidence_scale": {
+    "high": "Multiple authoritative sources agree and the attribute is stable across the region.",
+    "medium": "Sources agree on a broad range, but local cultivars and management shift the value.",
+    "low": "Indicative or context-dependent; treat as a planning placeholder until verified locally."
+  },
+  "references": {
+    "fao_crop_water": {
+      "title": "FAO Land & Water — Crop Information (crop water requirements)",
+      "url": "https://www.fao.org/land-water/databases-and-software/crop-information/en/",
+      "note": "Global crop water requirement ranges; not Palestinian field trials."
+    },
+    "fao_ecocrop": {
+      "title": "FAO Ecocrop database",
+      "url": "https://ecocrop.fao.org/",
+      "note": "Crop environmental ranges and life-cycle descriptions."
+    },
+    "fao_crop_calendar": {
+      "title": "FAO/GIEWS Crop Calendar",
+      "url": "https://cropcalendar.app/",
+      "note": "National and subnational planting/harvest windows; resolution varies."
+    },
+    "fao_soil": {
+      "title": "FAO Soils Portal — crop soil requirements",
+      "url": "https://www.fao.org/soils-portal/en/",
+      "note": "General pH, texture, drainage and salinity tolerance guidance."
+    },
+    "fao_faostat": {
+      "title": "FAO FAOSTAT",
+      "url": "https://www.fao.org/faostat/",
+      "note": "Production and area statistics; not a local price or market-access source."
+    },
+    "icarda": {
+      "title": "ICARDA — dryland Mediterranean cropping systems",
+      "url": "https://www.icarda.org/",
+      "note": "Regional agronomy for rainfed wheat, barley and food legumes."
+    },
+    "usda_plants": {
+      "title": "USDA PLANTS database",
+      "url": "https://plants.usda.gov/",
+      "note": "Taxonomy and general plant characteristics."
+    },
+    "local_extension": {
+      "title": "Local extension / Palestinian Ministry of Agriculture (verify)",
+      "url": "https://www.moa.pna.ps/",
+      "note": "Placeholder reference. Local windows and cultivars must be confirmed with extension staff."
+    }
+  },
+  "crops": {
+    "durum_wheat": {
+      "common_name": "Durum wheat",
+      "scientific_name": "Triticum turgidum subsp. durum",
+      "family": "Poaceae",
+      "crop_type": "cereal",
+      "is_legume": false,
+      "attributes": {
+        "water_demand_mm": {"value": [400, 650], "unit": "mm per growing season", "confidence": "medium", "source_refs": ["fao_crop_water", "fao_ecocrop", "icarda"], "notes": "Rainfed Mediterranean range; irrigation shifts the upper end."},
+        "growing_duration_days": {"value": [120, 180], "unit": "days", "confidence": "medium", "source_refs": ["fao_ecocrop", "fao_crop_calendar", "icarda"], "notes": "Sowing date and cultivar determine duration."},
+        "planting_window": {"value": {"start_month": 10, "end_month": 12}, "unit": "month window", "confidence": "low", "source_refs": ["fao_crop_calendar", "icarda", "local_extension"], "notes": "Typical autumn sowing after the first rains; verify locally."},
+        "harvest_window": {"value": {"start_month": 5, "end_month": 7}, "unit": "month window", "confidence": "low", "source_refs": ["fao_crop_calendar", "icarda", "local_extension"], "notes": "Depends on elevation and heat accumulation."},
+        "nitrogen_fixation": {"value": "none", "score": 0.0, "confidence": "high", "source_refs": ["fao_ecocrop", "usda_plants"], "notes": "Cereal; no symbiotic nitrogen fixation."},
+        "rooting_depth": {"value": "deep", "score": 0.75, "confidence": "medium", "source_refs": ["fao_ecocrop", "fao_soil"], "notes": "Deep roots but water use still depends on stored soil moisture."},
+        "forage_value": {"value": "medium", "score": 0.55, "confidence": "medium", "source_refs": ["fao_ecocrop", "icarda"], "notes": "Straw/residue can be used for livestock; quality varies."},
+        "residue_om_contribution": {"value": "medium", "score": 0.60, "confidence": "medium", "source_refs": ["fao_soil", "icarda"], "notes": "Residue retention depends on grazing and burning practices."},
+        "erosion_reduction": {"value": "medium", "score": 0.55, "confidence": "low", "source_refs": ["fao_soil", "icarda"], "notes": "Winter cover helps, but bare summer fallow is a risk."},
+        "soil_requirements": {"value": {"ph_range": [6.0, 8.0], "textures": ["loam", "clay_loam", "silty_clay_loam"], "salinity_tolerance": "medium", "drainage": "well_drained"}, "score": 0.75, "confidence": "medium", "source_refs": ["fao_soil", "fao_ecocrop"], "notes": "Broad adaptation; waterlogging is a limitation."},
+        "drought_tolerance": {"value": "medium", "score": 0.55, "confidence": "medium", "source_refs": ["fao_crop_water", "icarda"], "notes": "Durum wheat is more drought-adapted than bread wheat in Mediterranean systems, but yield still tracks rainfall."},
+        "market_suitability": {"value": "high", "score": 0.80, "confidence": "low", "source_refs": ["fao_faostat", "local_extension"], "notes": "Staple crop with established demand; local price and quality premiums are not modelled."}
+      }
+    },
+    "barley": {
+      "common_name": "Barley",
+      "scientific_name": "Hordeum vulgare",
+      "family": "Poaceae",
+      "crop_type": "cereal",
+      "is_legume": false,
+      "attributes": {
+        "water_demand_mm": {"value": [300, 500], "unit": "mm per growing season", "confidence": "medium", "source_refs": ["fao_crop_water", "fao_ecocrop", "icarda"], "notes": "Generally lower water demand than wheat."},
+        "growing_duration_days": {"value": [90, 150], "unit": "days", "confidence": "medium", "source_refs": ["fao_ecocrop", "fao_crop_calendar", "icarda"], "notes": "Early-maturing cultivars can escape terminal heat."},
+        "planting_window": {"value": {"start_month": 10, "end_month": 12}, "unit": "month window", "confidence": "low", "source_refs": ["fao_crop_calendar", "icarda", "local_extension"], "notes": "Autumn sowing is typical in rainfed Mediterranean systems."},
+        "harvest_window": {"value": {"start_month": 4, "end_month": 6}, "unit": "month window", "confidence": "low", "source_refs": ["fao_crop_calendar", "icarda", "local_extension"], "notes": "Earlier than wheat in many environments."},
+        "nitrogen_fixation": {"value": "none", "score": 0.0, "confidence": "high", "source_refs": ["fao_ecocrop", "usda_plants"], "notes": "Cereal; no symbiotic nitrogen fixation."},
+        "rooting_depth": {"value": "medium", "score": 0.60, "confidence": "medium", "source_refs": ["fao_ecocrop", "fao_soil"], "notes": "Fibrous root system; effective depth depends on soil constraints."},
+        "forage_value": {"value": "high", "score": 0.80, "confidence": "medium", "source_refs": ["fao_ecocrop", "icarda"], "notes": "Grain and straw are both used for livestock; grazing of early stands is common."},
+        "residue_om_contribution": {"value": "medium", "score": 0.55, "confidence": "medium", "source_refs": ["fao_soil", "icarda"], "notes": "Residue is often removed for feed, reducing return to soil."},
+        "erosion_reduction": {"value": "medium", "score": 0.55, "confidence": "low", "source_refs": ["fao_soil", "icarda"], "notes": "Similar to wheat; depends on residue management."},
+        "soil_requirements": {"value": {"ph_range": [6.0, 8.5], "textures": ["loam", "sandy_loam", "clay_loam"], "salinity_tolerance": "high", "drainage": "medium"}, "score": 0.80, "confidence": "medium", "source_refs": ["fao_soil", "fao_ecocrop"], "notes": "More tolerant of salinity and poorer soils than wheat."},
+        "drought_tolerance": {"value": "high", "score": 0.80, "confidence": "medium", "source_refs": ["fao_crop_water", "icarda"], "notes": "Better adapted to dry, marginal rainfed conditions."},
+        "market_suitability": {"value": "medium", "score": 0.55, "confidence": "low", "source_refs": ["fao_faostat", "local_extension"], "notes": "Feed and food uses; price depends on quality and local demand."}
+      }
+    },
+    "chickpea": {
+      "common_name": "Chickpea",
+      "scientific_name": "Cicer arietinum",
+      "family": "Fabaceae",
+      "crop_type": "legume",
+      "is_legume": true,
+      "attributes": {
+        "water_demand_mm": {"value": [300, 450], "unit": "mm per growing season", "confidence": "medium", "source_refs": ["fao_crop_water", "fao_ecocrop", "icarda"], "notes": "Often grown on stored soil moisture in Mediterranean environments."},
+        "growing_duration_days": {"value": [90, 150], "unit": "days", "confidence": "medium", "source_refs": ["fao_ecocrop", "fao_crop_calendar", "icarda"], "notes": "Spring and winter types differ substantially."},
+        "planting_window": {"value": {"start_month": 2, "end_month": 3}, "unit": "month window", "confidence": "low", "source_refs": ["fao_crop_calendar", "icarda", "local_extension"], "notes": "Spring sowing is common; winter sowing is possible in mild areas. Confirm locally."},
+        "harvest_window": {"value": {"start_month": 5, "end_month": 6}, "unit": "month window", "confidence": "low", "source_refs": ["fao_crop_calendar", "icarda", "local_extension"], "notes": "Harvest timing is sensitive to heat and pod shattering."},
+        "nitrogen_fixation": {"value": "high", "score": 0.85, "confidence": "high", "source_refs": ["fao_ecocrop", "usda_plants"], "notes": "Symbiotic fixation requires appropriate rhizobia and adequate moisture."},
+        "rooting_depth": {"value": "medium", "score": 0.60, "confidence": "medium", "source_refs": ["fao_ecocrop", "fao_soil"], "notes": "Taproot; effective depth limited by compaction and salinity."},
+        "forage_value": {"value": "medium", "score": 0.50, "confidence": "medium", "source_refs": ["fao_ecocrop", "icarda"], "notes": "Residue can be grazed or used as feed, but quality is lower than cereal straw."},
+        "residue_om_contribution": {"value": "low", "score": 0.30, "confidence": "medium", "source_refs": ["fao_soil", "icarda"], "notes": "Lower biomass return than cereals; the nitrogen benefit is the main soil service."},
+        "erosion_reduction": {"value": "low", "score": 0.40, "confidence": "low", "source_refs": ["fao_soil", "icarda"], "notes": "Limited ground cover compared with dense cereals."},
+        "soil_requirements": {"value": {"ph_range": [6.0, 8.5], "textures": ["loam", "sandy_loam", "clay_loam"], "salinity_tolerance": "low", "drainage": "well_drained"}, "score": 0.70, "confidence": "medium", "source_refs": ["fao_soil", "fao_ecocrop"], "notes": "Sensitive to waterlogging and salinity."},
+        "drought_tolerance": {"value": "high", "score": 0.75, "confidence": "medium", "source_refs": ["fao_crop_water", "icarda"], "notes": "Good escape/avoidance strategy in short Mediterranean seasons."},
+        "market_suitability": {"value": "medium", "score": 0.60, "confidence": "low", "source_refs": ["fao_faostat", "local_extension"], "notes": "Regional demand for food legumes; price volatility is not modelled."}
+      }
+    },
+    "lentil": {
+      "common_name": "Lentil",
+      "scientific_name": "Lens culinaris",
+      "family": "Fabaceae",
+      "crop_type": "legume",
+      "is_legume": true,
+      "attributes": {
+        "water_demand_mm": {"value": [300, 400], "unit": "mm per growing season", "confidence": "medium", "source_refs": ["fao_crop_water", "fao_ecocrop", "icarda"], "notes": "Low water demand; often rainfed."},
+        "growing_duration_days": {"value": [90, 140], "unit": "days", "confidence": "medium", "source_refs": ["fao_ecocrop", "fao_crop_calendar", "icarda"], "notes": "Short-season legume."},
+        "planting_window": {"value": {"start_month": 10, "end_month": 12}, "unit": "month window", "confidence": "low", "source_refs": ["fao_crop_calendar", "icarda", "local_extension"], "notes": "Autumn sowing in Mediterranean environments; spring types exist."},
+        "harvest_window": {"value": {"start_month": 5, "end_month": 6}, "unit": "month window", "confidence": "low", "source_refs": ["fao_crop_calendar", "icarda", "local_extension"], "notes": "Harvest before shattering; timing is critical."},
+        "nitrogen_fixation": {"value": "high", "score": 0.80, "confidence": "high", "source_refs": ["fao_ecocrop", "usda_plants"], "notes": "Fixes nitrogen when properly nodulated."},
+        "rooting_depth": {"value": "shallow", "score": 0.40, "confidence": "medium", "source_refs": ["fao_ecocrop", "fao_soil"], "notes": "Shallow root system; sensitive to drought at flowering."},
+        "forage_value": {"value": "medium", "score": 0.45, "confidence": "medium", "source_refs": ["fao_ecocrop", "icarda"], "notes": "Residue has some feed value."},
+        "residue_om_contribution": {"value": "low", "score": 0.25, "confidence": "medium", "source_refs": ["fao_soil", "icarda"], "notes": "Low residue biomass."},
+        "erosion_reduction": {"value": "low", "score": 0.35, "confidence": "low", "source_refs": ["fao_soil", "icarda"], "notes": "Sparse canopy early in the season."},
+        "soil_requirements": {"value": {"ph_range": [6.0, 8.0], "textures": ["loam", "sandy_loam"], "salinity_tolerance": "low", "drainage": "well_drained"}, "score": 0.65, "confidence": "medium", "source_refs": ["fao_soil", "fao_ecocrop"], "notes": "Poor tolerance of salinity and waterlogging."},
+        "drought_tolerance": {"value": "medium", "score": 0.65, "confidence": "medium", "source_refs": ["fao_crop_water", "icarda"], "notes": "Drought escape via short duration, but flowering is sensitive."},
+        "market_suitability": {"value": "medium", "score": 0.55, "confidence": "low", "source_refs": ["fao_faostat", "local_extension"], "notes": "Food legume with regional demand; market access varies."}
+      }
+    },
+    "faba_bean": {
+      "common_name": "Faba bean",
+      "scientific_name": "Vicia faba",
+      "family": "Fabaceae",
+      "crop_type": "legume",
+      "is_legume": true,
+      "attributes": {
+        "water_demand_mm": {"value": [350, 500], "unit": "mm per growing season", "confidence": "medium", "source_refs": ["fao_crop_water", "fao_ecocrop", "icarda"], "notes": "Higher water demand than lentil or chickpea."},
+        "growing_duration_days": {"value": [120, 180], "unit": "days", "confidence": "medium", "source_refs": ["fao_ecocrop", "fao_crop_calendar", "icarda"], "notes": "Long-season winter legume."},
+        "planting_window": {"value": {"start_month": 10, "end_month": 12}, "unit": "month window", "confidence": "low", "source_refs": ["fao_crop_calendar", "icarda", "local_extension"], "notes": "Autumn sowing in mild Mediterranean areas."},
+        "harvest_window": {"value": {"start_month": 5, "end_month": 6}, "unit": "month window", "confidence": "low", "source_refs": ["fao_crop_calendar", "icarda", "local_extension"], "notes": "Harvest timing depends on pod maturity and heat."},
+        "nitrogen_fixation": {"value": "high", "score": 0.90, "confidence": "high", "source_refs": ["fao_ecocrop", "usda_plants"], "notes": "Strong nitrogen fixer; biomass can be incorporated as green manure."},
+        "rooting_depth": {"value": "deep", "score": 0.70, "confidence": "medium", "source_refs": ["fao_ecocrop", "fao_soil"], "notes": "Deep taproot improves access to stored moisture."},
+        "forage_value": {"value": "medium", "score": 0.55, "confidence": "medium", "source_refs": ["fao_ecocrop", "icarda"], "notes": "Grain and residue have feed value."},
+        "residue_om_contribution": {"value": "medium", "score": 0.55, "confidence": "medium", "source_refs": ["fao_soil", "icarda"], "notes": "More biomass than lentil/chickpea if the crop is healthy."},
+        "erosion_reduction": {"value": "medium", "score": 0.55, "confidence": "low", "source_refs": ["fao_soil", "icarda"], "notes": "Good ground cover during winter."},
+        "soil_requirements": {"value": {"ph_range": [6.0, 8.0], "textures": ["loam", "clay_loam"], "salinity_tolerance": "low", "drainage": "well_drained"}, "score": 0.65, "confidence": "medium", "source_refs": ["fao_soil", "fao_ecocrop"], "notes": "Sensitive to waterlogging and salinity."},
+        "drought_tolerance": {"value": "low", "score": 0.40, "confidence": "medium", "source_refs": ["fao_crop_water", "icarda"], "notes": "Less drought-adapted than chickpea or barley."},
+        "market_suitability": {"value": "medium", "score": 0.55, "confidence": "low", "source_refs": ["fao_faostat", "local_extension"], "notes": "Food and feed uses; market is smaller than cereals."}
+      }
+    },
+    "sunflower": {
+      "common_name": "Sunflower",
+      "scientific_name": "Helianthus annuus",
+      "family": "Asteraceae",
+      "crop_type": "oilseed",
+      "is_legume": false,
+      "attributes": {
+        "water_demand_mm": {"value": [500, 700], "unit": "mm per growing season", "confidence": "medium", "source_refs": ["fao_crop_water", "fao_ecocrop"], "notes": "Usually requires irrigation or supplemental water in dry Mediterranean summers."},
+        "growing_duration_days": {"value": [90, 130], "unit": "days", "confidence": "medium", "source_refs": ["fao_ecocrop", "fao_crop_calendar"], "notes": "Summer crop."},
+        "planting_window": {"value": {"start_month": 3, "end_month": 4}, "unit": "month window", "confidence": "low", "source_refs": ["fao_crop_calendar", "local_extension"], "notes": "Spring sowing after frost risk; confirm locally."},
+        "harvest_window": {"value": {"start_month": 7, "end_month": 8}, "unit": "month window", "confidence": "low", "source_refs": ["fao_crop_calendar", "local_extension"], "notes": "Harvest at physiological maturity."},
+        "nitrogen_fixation": {"value": "none", "score": 0.0, "confidence": "high", "source_refs": ["fao_ecocrop", "usda_plants"], "notes": "Non-legume."},
+        "rooting_depth": {"value": "deep", "score": 0.80, "confidence": "medium", "source_refs": ["fao_ecocrop", "fao_soil"], "notes": "Deep taproot; good access to subsoil water."},
+        "forage_value": {"value": "low", "score": 0.20, "confidence": "medium", "source_refs": ["fao_ecocrop"], "notes": "Limited forage value."},
+        "residue_om_contribution": {"value": "low", "score": 0.30, "confidence": "medium", "source_refs": ["fao_soil"], "notes": "Moderate residue; often removed."},
+        "erosion_reduction": {"value": "low", "score": 0.35, "confidence": "low", "source_refs": ["fao_soil"], "notes": "Wide rows and late canopy closure leave soil exposed early."},
+        "soil_requirements": {"value": {"ph_range": [6.0, 7.5], "textures": ["loam", "sandy_loam", "clay_loam"], "salinity_tolerance": "medium", "drainage": "well_drained"}, "score": 0.65, "confidence": "medium", "source_refs": ["fao_soil", "fao_ecocrop"], "notes": "Sensitive to waterlogging."},
+        "drought_tolerance": {"value": "medium", "score": 0.60, "confidence": "medium", "source_refs": ["fao_crop_water", "fao_ecocrop"], "notes": "Deep roots help, but yield responds strongly to water supply."},
+        "market_suitability": {"value": "medium", "score": 0.60, "confidence": "low", "source_refs": ["fao_faostat", "local_extension"], "notes": "Oilseed market depends on local crushing and trade access."}
+      }
+    },
+    "maize": {
+      "common_name": "Maize (corn)",
+      "scientific_name": "Zea mays",
+      "family": "Poaceae",
+      "crop_type": "cereal",
+      "is_legume": false,
+      "attributes": {
+        "water_demand_mm": {"value": [500, 800], "unit": "mm per growing season", "confidence": "medium", "source_refs": ["fao_crop_water", "fao_ecocrop"], "notes": "High water demand; usually irrigated in Mediterranean summers."},
+        "growing_duration_days": {"value": [90, 140], "unit": "days", "confidence": "medium", "source_refs": ["fao_ecocrop", "fao_crop_calendar"], "notes": "Cultivar and sowing date dependent."},
+        "planting_window": {"value": {"start_month": 4, "end_month": 5}, "unit": "month window", "confidence": "low", "source_refs": ["fao_crop_calendar", "local_extension"], "notes": "After soil warms; confirm locally."},
+        "harvest_window": {"value": {"start_month": 8, "end_month": 9}, "unit": "month window", "confidence": "low", "source_refs": ["fao_crop_calendar", "local_extension"], "notes": "Grain or silage harvest."},
+        "nitrogen_fixation": {"value": "none", "score": 0.0, "confidence": "high", "source_refs": ["fao_ecocrop", "usda_plants"], "notes": "Non-legume."},
+        "rooting_depth": {"value": "deep", "score": 0.80, "confidence": "medium", "source_refs": ["fao_ecocrop", "fao_soil"], "notes": "Deep fibrous roots."},
+        "forage_value": {"value": "high", "score": 0.85, "confidence": "medium", "source_refs": ["fao_ecocrop", "icarda"], "notes": "Grain and silage are valuable feed."},
+        "residue_om_contribution": {"value": "medium", "score": 0.50, "confidence": "medium", "source_refs": ["fao_soil"], "notes": "Residue can be retained or grazed."},
+        "erosion_reduction": {"value": "medium", "score": 0.50, "confidence": "low", "source_refs": ["fao_soil"], "notes": "Dense canopy once established, but wide rows early."},
+        "soil_requirements": {"value": {"ph_range": [5.8, 7.5], "textures": ["loam", "silty_clay_loam", "sandy_loam"], "salinity_tolerance": "low", "drainage": "well_drained"}, "score": 0.70, "confidence": "medium", "source_refs": ["fao_soil", "fao_ecocrop"], "notes": "High nutrient and water demand."},
+        "drought_tolerance": {"value": "low", "score": 0.35, "confidence": "medium", "source_refs": ["fao_crop_water"], "notes": "Sensitive to water stress at flowering."},
+        "market_suitability": {"value": "medium", "score": 0.60, "confidence": "low", "source_refs": ["fao_faostat", "local_extension"], "notes": "Feed demand; local price variability not modelled."}
+      }
+    },
+    "sesame": {
+      "common_name": "Sesame",
+      "scientific_name": "Sesamum indicum",
+      "family": "Pedaliaceae",
+      "crop_type": "oilseed",
+      "is_legume": false,
+      "attributes": {
+        "water_demand_mm": {"value": [400, 650], "unit": "mm per growing season", "confidence": "low", "source_refs": ["fao_crop_water", "fao_ecocrop"], "notes": "Often grown as a low-input summer crop; ranges are uncertain."},
+        "growing_duration_days": {"value": [80, 120], "unit": "days", "confidence": "medium", "source_refs": ["fao_ecocrop", "fao_crop_calendar"], "notes": "Short summer season."},
+        "planting_window": {"value": {"start_month": 4, "end_month": 5}, "unit": "month window", "confidence": "low", "source_refs": ["fao_crop_calendar", "local_extension"], "notes": "Sow after soil warms; confirm locally."},
+        "harvest_window": {"value": {"start_month": 8, "end_month": 9}, "unit": "month window", "confidence": "low", "source_refs": ["fao_crop_calendar", "local_extension"], "notes": "Harvest before capsule shattering."},
+        "nitrogen_fixation": {"value": "none", "score": 0.0, "confidence": "high", "source_refs": ["fao_ecocrop", "usda_plants"], "notes": "Non-legume."},
+        "rooting_depth": {"value": "medium", "score": 0.55, "confidence": "low", "source_refs": ["fao_ecocrop"], "notes": "Taproot; limited data for local cultivars."},
+        "forage_value": {"value": "low", "score": 0.15, "confidence": "medium", "source_refs": ["fao_ecocrop"], "notes": "Limited forage use."},
+        "residue_om_contribution": {"value": "low", "score": 0.25, "confidence": "low", "source_refs": ["fao_soil"], "notes": "Low residue biomass."},
+        "erosion_reduction": {"value": "low", "score": 0.35, "confidence": "low", "source_refs": ["fao_soil"], "notes": "Sparse early canopy."},
+        "soil_requirements": {"value": {"ph_range": [5.5, 8.0], "textures": ["loam", "sandy_loam"], "salinity_tolerance": "low", "drainage": "well_drained"}, "score": 0.60, "confidence": "low", "source_refs": ["fao_soil", "fao_ecocrop"], "notes": "Sensitive to waterlogging."},
+        "drought_tolerance": {"value": "high", "score": 0.80, "confidence": "low", "source_refs": ["fao_crop_water"], "notes": "Generally drought-tolerant once established."},
+        "market_suitability": {"value": "low", "score": 0.45, "confidence": "low", "source_refs": ["fao_faostat", "local_extension"], "notes": "Niche market; local demand and contract availability unknown."}
+      }
+    },
+    "common_vetch": {
+      "common_name": "Common vetch",
+      "scientific_name": "Vicia sativa",
+      "family": "Fabaceae",
+      "crop_type": "forage_legume",
+      "is_legume": true,
+      "attributes": {
+        "water_demand_mm": {"value": [300, 450], "unit": "mm per growing season", "confidence": "low", "source_refs": ["fao_crop_water", "fao_ecocrop", "icarda"], "notes": "Often grown as a rainfed winter cover/forage legume."},
+        "growing_duration_days": {"value": [90, 150], "unit": "days", "confidence": "medium", "source_refs": ["fao_ecocrop", "icarda"], "notes": "Can be terminated early for green manure."},
+        "planting_window": {"value": {"start_month": 10, "end_month": 11}, "unit": "month window", "confidence": "low", "source_refs": ["fao_crop_calendar", "icarda", "local_extension"], "notes": "Autumn sowing with the first rains."},
+        "harvest_window": {"value": {"start_month": 4, "end_month": 5}, "unit": "month window", "confidence": "low", "source_refs": ["fao_crop_calendar", "icarda", "local_extension"], "notes": "Forage harvest or incorporation timing varies."},
+        "nitrogen_fixation": {"value": "high", "score": 0.90, "confidence": "high", "source_refs": ["fao_ecocrop", "usda_plants"], "notes": "Strong nitrogen fixer; useful as green manure."},
+        "rooting_depth": {"value": "medium", "score": 0.55, "confidence": "medium", "source_refs": ["fao_ecocrop", "fao_soil"], "notes": "Fibrous root system."},
+        "forage_value": {"value": "high", "score": 0.80, "confidence": "medium", "source_refs": ["fao_ecocrop", "icarda"], "notes": "Valuable forage legume; hay quality depends on harvest timing."},
+        "residue_om_contribution": {"value": "medium", "score": 0.50, "confidence": "medium", "source_refs": ["fao_soil", "icarda"], "notes": "Green-manure incorporation adds organic matter."},
+        "erosion_reduction": {"value": "high", "score": 0.70, "confidence": "medium", "source_refs": ["fao_soil", "icarda"], "notes": "Dense winter cover reduces erosion."},
+        "soil_requirements": {"value": {"ph_range": [5.5, 8.0], "textures": ["loam", "clay_loam", "sandy_loam"], "salinity_tolerance": "low", "drainage": "medium"}, "score": 0.70, "confidence": "low", "source_refs": ["fao_soil", "fao_ecocrop"], "notes": "Adapted to a range of soils; avoid waterlogging."},
+        "drought_tolerance": {"value": "medium", "score": 0.60, "confidence": "low", "source_refs": ["fao_crop_water", "icarda"], "notes": "Moderate; biomass declines under severe drought."},
+        "market_suitability": {"value": "low", "score": 0.20, "confidence": "low", "source_refs": ["local_extension"], "notes": "Usually a service crop, not a primary cash crop."}
+      }
+    },
+    "fallow": {
+      "common_name": "Fallow (no crop)",
+      "scientific_name": null,
+      "family": "none",
+      "crop_type": "fallow",
+      "is_legume": false,
+      "attributes": {
+        "water_demand_mm": {"value": [0, 50], "unit": "mm per fallow period", "confidence": "medium", "source_refs": ["icarda", "fao_soil"], "notes": "Evaporation and weed water use only."},
+        "growing_duration_days": {"value": [60, 240], "unit": "days", "confidence": "low", "source_refs": ["icarda"], "notes": "Fallow length is a management choice."},
+        "planting_window": {"value": null, "unit": "not applicable", "confidence": "high", "source_refs": ["icarda"], "notes": "No planting."},
+        "harvest_window": {"value": null, "unit": "not applicable", "confidence": "high", "source_refs": ["icarda"], "notes": "No harvest."},
+        "nitrogen_fixation": {"value": "none", "score": 0.0, "confidence": "high", "source_refs": ["fao_ecocrop"], "notes": "No fixation."},
+        "rooting_depth": {"value": "none", "score": 0.0, "confidence": "high", "source_refs": ["fao_soil"], "notes": "No crop roots."},
+        "forage_value": {"value": "none", "score": 0.0, "confidence": "high", "source_refs": ["fao_ecocrop"], "notes": "No forage production unless weeds are grazed."},
+        "residue_om_contribution": {"value": "low", "score": 0.10, "confidence": "medium", "source_refs": ["fao_soil"], "notes": "No crop residue; weeds may contribute little."},
+        "erosion_reduction": {"value": "none", "score": 0.10, "confidence": "medium", "source_refs": ["fao_soil"], "notes": "Bare soil is exposed unless protected by residue or cover."},
+        "soil_requirements": {"value": {"ph_range": null, "textures": [], "salinity_tolerance": "not_applicable", "drainage": "not_applicable"}, "score": 0.50, "confidence": "high", "source_refs": ["fao_soil"], "notes": "Not applicable."},
+        "drought_tolerance": {"value": "not_applicable", "score": 0.0, "confidence": "high", "source_refs": ["fao_crop_water"], "notes": "Not applicable."},
+        "market_suitability": {"value": "none", "score": 0.0, "confidence": "high", "source_refs": ["fao_faostat"], "notes": "No market product."}
+      }
+    }
+  }
+}
